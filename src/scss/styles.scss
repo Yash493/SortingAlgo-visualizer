@@ -1,0 +1,107 @@
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Define your modern color palette
+
+
+$primary-color: #FF004D;      // Dodger Blue
+$secondary-color:#3559E0;    // Emerald Green
+$accent-color: #FFA732;       // Salmon Red
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+// Apply the colors to your styles
+.col span {
+    font-size: 18px;
+    color: $primary-color;
+}
+
+@media (max-width: 576px) {
+    .slider-container span {
+        font-size: 16px;
+        color: $secondary-color;
+    }
+}
+
+@media (max-width: 340px) {
+    .slider-container span {
+        font-size: 12px;
+        color: $accent-color;
+    }
+}
+
+/* Additional styles based on the color palette */
+
+.offcanvas {
+    background-color: $secondary-color !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sort-name {
+    animation: 2s anim-lineUp ease-out;
+    color: $accent-color;
+}
+
+.info-container p {
+    font-size: 23px;
+    color: $primary-color;
+}
+
+@media (max-width: 992px) {
+    .info-container p {
+        font-size: 17px; 
+        color: $secondary-color;
+    }
+}
+@media (max-width: 576px) {
+    .slider-container span {
+        font-size: 16px;
+    }
+}
+@media (max-width: 340px) {
+    .slider-container span {
+        font-size: 12px;
+    }
+}
+@media (max-width: 290px) {
+    .slider-container span {
+        font-size: 10px;
+    }
+}
+
+td {
+    white-space:nowrap;
+}
+
+.compl-name {
+    border-right: 2px solid gray;
+}
+
+table tr:not(:last-child) {
+    border-bottom: 2px solid gray;
+}
+
+table:last-child tr:last-child td {
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.in-view {
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
